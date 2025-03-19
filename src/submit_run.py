@@ -5,10 +5,11 @@ import sys
 sys.path.append('../src')
 from pipelines.pipeline_definitions.pipeline_definition import pipeline
 from pipelines.pipeline_arg.pipeline_arg import arguments
+KFP_ENDPOINT = "http://localhost:8080"
 
 def submit_pipeline():
 
-    client = kfp.Client() 
+    client = kfp.Client(host=KFP_ENDPOINT) 
     
 
     # Define your experiment and run name
